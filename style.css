@@ -1,0 +1,183 @@
+/* DESIGN DECISIONS */
+
+/* 
+
+  Colors: 
+    ### Primary
+      - Pale blue: hsl(225, 100%, 94%)
+      - Bright blue: hsl(245, 75%, 52%)
+
+    ### Neutral
+      - Very pale blue: hsl(225, 100%, 98%) hsl(225, 100%, 100%)
+      - Desaturated blue: hsl(224, 23%, 55%)
+      - Dark blue: hsl(223, 47%, 23%)
+
+  Fonts:
+    - Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+    - Weights: 500, 700, 900
+
+*/
+
+/* GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5rem;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-color: hsl(225, 100%, 94%);
+  background-size: 100% 45%;
+  background-repeat: no-repeat;
+}
+
+/* SPECIFIC STYLES */
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+}
+
+.card-img,
+.card-section {
+  width: 42rem;
+}
+
+.card-img {
+  align-self: end;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.card-section {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  background-color: hsl(225, 100%, 100%);
+  padding: 4rem 6rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0.5rem 1.2rem 3rem hsl(225, 100%, 85%);
+}
+
+.card-section-heading {
+  color: hsl(223, 47%, 23%);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.card-text {
+  color: hsl(224, 23%, 55%);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card-plan-container {
+  width: 33rem;
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  background-color: hsl(225, 100%, 98%);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-plan-heading {
+  font-size: 1.5rem;
+  color: hsl(223, 47%, 23%);
+  margin-bottom: 0.3rem;
+}
+
+.card-plan-link:link,
+.card-plan-link:visited {
+  color: hsl(245, 75%, 52%);
+  margin-left: 6rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.03rem;
+  font-weight: 700;
+}
+
+.card-plan-link:hover,
+.card-plan-link:active {
+  text-decoration: none;
+  opacity: 75%;
+}
+
+.cta-link:link,
+.cta-link:visited {
+  width: 33rem;
+  display: inline-block;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 98%);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1rem;
+  padding: 1.3rem;
+  box-shadow: 0.5rem 1.2rem 3rem hsl(225, 100%, 85%);
+  margin-bottom: 1rem;
+}
+
+.cta-link:hover,
+.cta-link:active {
+  opacity: 75%;
+}
+
+.btn-cancel {
+  border: none;
+  background: none;
+  color: hsl(224, 23%, 55%);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 900;
+}
+
+.btn-cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+/* MEDIA QUERIES */
+
+/*512px*/
+
+@media (max-width: 32em) {
+  .card-img,
+  .card-section {
+    max-width: 35rem;
+  }
+
+  .card-section {
+    padding: 3rem;
+  }
+
+  .card-plan-container,
+  .cta-link:link,
+  .cta-link:visited {
+    max-width: 29rem;
+  }
+
+  .card-plan-container {
+    padding: 1.5rem 2rem;
+  }
+
+  .card-plan-link:link,
+  .card-plan-link:visited {
+    font-size: 1.25rem;
+    margin-left: 4.5rem;
+  }
+
+  .card-text,
+  .card-plan-heading {
+    font-size: 1.4rem;
+  }
+}
