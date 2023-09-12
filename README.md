@@ -23,8 +23,8 @@ This is my fourth challenge on the frontend mentor website, the task is to build
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/order-summary-component-grid-flexbox-kWxgkumn65)
+- Live Site URL: (https://order-summary-saif.netlify.app/)
 
 ## My process
 
